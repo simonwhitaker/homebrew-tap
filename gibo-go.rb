@@ -5,20 +5,20 @@
 class GiboGo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo-go"
-  version "3.0.0-beta.3"
+  version "3.0.0-beta.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.3/gibo-go_Darwin_x86_64.tar.gz"
-      sha256 "f9ab6eac7686a73890d573796ecd94956be8bc72f9074a1483c690fe159d77cb"
+    if Hardware::CPU.arm?
+      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.4/gibo-go_Darwin_arm64.tar.gz"
+      sha256 "36363a55c1fce3f9d81376cd8f9626d16ccbb7966f01cfe98ac04e0af977a435"
 
       def install
         bin.install "gibo-go"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.3/gibo-go_Darwin_arm64.tar.gz"
-      sha256 "61947a13d7ba890b3eba96b6a18560cac0e108eb413effce26938b9cef96f235"
+    if Hardware::CPU.intel?
+      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.4/gibo-go_Darwin_x86_64.tar.gz"
+      sha256 "42439d80d7cbf0e799117210e958e7f4948ddf89b5f1489ca9f93bb73e27a084"
 
       def install
         bin.install "gibo-go"
@@ -27,17 +27,17 @@ class GiboGo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.3/gibo-go_Linux_arm64.tar.gz"
-      sha256 "dc204f3a3ae15f29dc5573f5571de43cd8acb87ad93d11115753f706932d4a25"
+    if Hardware::CPU.intel?
+      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.4/gibo-go_Linux_x86_64.tar.gz"
+      sha256 "4bbfea19072082f21c335b4abf298e3db7f019da6e188887e91f0c2273051661"
 
       def install
         bin.install "gibo-go"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.3/gibo-go_Linux_x86_64.tar.gz"
-      sha256 "4587cca54383bf550724d418109c53839fb2453a3992d29984c21a080ef379b2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/simonwhitaker/gibo-go/releases/download/v3.0.0-beta.4/gibo-go_Linux_arm64.tar.gz"
+      sha256 "16eba4f6aa09af62e2037d7cdad7d125e783b636f581adec80c448a80a9ccfd0"
 
       def install
         bin.install "gibo-go"
