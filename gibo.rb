@@ -5,20 +5,20 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.2"
+  version "3.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.2/gibo_Darwin_x86_64.tar.gz"
-      sha256 "14d3c7703f59d0b087ca4cfc9b43a830047d12e1295beceed8c307a033aa1a3f"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.3/gibo_Darwin_x86_64.tar.gz"
+      sha256 "dcbf6f6f1babffa7a29c0acab3606679a1433d48ce67bb5d90125916ab2f6cb7"
 
       def install
         bin.install "gibo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.2/gibo_Darwin_arm64.tar.gz"
-      sha256 "bf38abd11bc40b72c881cd3d6bbf2c6089512ed0078a7969b4f9e3d4c164db60"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.3/gibo_Darwin_arm64.tar.gz"
+      sha256 "e6927610910f2fe88580459aabd73d15327ac4eb9ce9dcbb0a444756acd80e19"
 
       def install
         bin.install "gibo"
@@ -27,17 +27,17 @@ class Gibo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.2/gibo_Linux_x86_64.tar.gz"
-      sha256 "d9ba58ef4fb7a1a1bf4f3e4ffd5f0fc80de0d1382dce85c2f7c3838244dd944d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.3/gibo_Linux_arm64.tar.gz"
+      sha256 "b75a73eecc00c8cd0465d262aa849d35f714ddf7d79961b35fc639fa3783c42b"
 
       def install
         bin.install "gibo"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.2/gibo_Linux_arm64.tar.gz"
-      sha256 "fddc82cff90ca03d57681b31a8dd9e3d0701f2145734bba1e09c66757ca43188"
+    if Hardware::CPU.intel?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.3/gibo_Linux_x86_64.tar.gz"
+      sha256 "95e8bf25592f8ed5f8df340b2340ec675df732d756edde37c95bfad7d99d0662"
 
       def install
         bin.install "gibo"
