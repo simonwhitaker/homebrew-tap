@@ -5,20 +5,20 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.4"
+  version "3.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.4/gibo_Darwin_x86_64.tar.gz"
-      sha256 "430c732da3d1aae51651c2516c82fc5c2916c6059d9c822dbdec95ff4bbf9268"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.5/gibo_Darwin_x86_64.tar.gz"
+      sha256 "2951c3860b95c34baf1dadf792bb93515562786b48c4ccd730b225539b31929c"
 
       def install
         bin.install "gibo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.4/gibo_Darwin_arm64.tar.gz"
-      sha256 "58169f2e79a0814d26a810a9e954616e3d6f7cb852eda3d4d132e435582d5da6"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.5/gibo_Darwin_arm64.tar.gz"
+      sha256 "b503f31c82389e5eecb375e10307672885156ce61113aa54be42f1a5113210ce"
 
       def install
         bin.install "gibo"
@@ -28,16 +28,16 @@ class Gibo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.4/gibo_Linux_arm64.tar.gz"
-      sha256 "6d0cb58bbdfbcc668998a1a76b74b0563972a4676031dbbe841361e79125feb0"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.5/gibo_Linux_arm64.tar.gz"
+      sha256 "7aac6a1970bcc324d2da72530fbd5cb2f5192bd2553c3947195cc99c32ece178"
 
       def install
         bin.install "gibo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.4/gibo_Linux_x86_64.tar.gz"
-      sha256 "17e0355ed2be35049ff886e14a249c4cf2bb52e8562795948b623a9ad9f853bf"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.5/gibo_Linux_x86_64.tar.gz"
+      sha256 "f5aff08fc158ba64e6a8f759295e1eb735e72de217228b15597bef9f2d7510b7"
 
       def install
         bin.install "gibo"
