@@ -5,20 +5,20 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.6"
+  version "3.0.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.6/gibo_Darwin_x86_64.tar.gz"
-      sha256 "387eeb146ffcd5b4210f780312d2f9b59e3906843931f85ef8067edc60e90387"
+    if Hardware::CPU.arm?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.7/gibo_Darwin_arm64.tar.gz"
+      sha256 "adf98a8a3a0d636156bfc136490908bd8a4b50eb279b5141ca335711cc742ab7"
 
       def install
         bin.install "gibo"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.6/gibo_Darwin_arm64.tar.gz"
-      sha256 "59b4599d85b9d170cb006405b3cbab00c419228453df3e821b4ada826bef75d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.7/gibo_Darwin_x86_64.tar.gz"
+      sha256 "283ff351f7729bec4f13712b0f035c0ab34a06379f0dbc552be6047b2358b237"
 
       def install
         bin.install "gibo"
@@ -27,17 +27,17 @@ class Gibo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.6/gibo_Linux_arm64.tar.gz"
-      sha256 "0ff236d19a41f6934096ffbf1377dc6dc94d71dc8468d6d7583701c3d60fc84b"
+    if Hardware::CPU.intel?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.7/gibo_Linux_x86_64.tar.gz"
+      sha256 "ce6cff5bda34a62de9e033893e19c52e9da7bb791a9b5172403d6b57e82ff7f3"
 
       def install
         bin.install "gibo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.6/gibo_Linux_x86_64.tar.gz"
-      sha256 "1cbafb723faf232290604e0dc9aed433610e9db5c5a9dae18a09a2a3e7ba90ef"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.7/gibo_Linux_arm64.tar.gz"
+      sha256 "33ba92f10611608fd19a0203f85c85dcd4af7f18800953364063610cef68f6e1"
 
       def install
         bin.install "gibo"
