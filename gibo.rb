@@ -5,20 +5,20 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.9"
+  version "3.0.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.9/gibo_Darwin_x86_64.tar.gz"
-      sha256 "8504d96a285fe938511a09b71de2e591ec53a6d26cecc0a39a3061b9bde55a9b"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.10/gibo_Darwin_x86_64.tar.gz"
+      sha256 "a3fa2b71b2489973603af6c34ddb2d552b6467183c923223b038dd1f66d452d6"
 
       def install
         bin.install "gibo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.9/gibo_Darwin_arm64.tar.gz"
-      sha256 "7cf2b431cffb90b278d41297574fd2830f170cba2f358a9bd291765632c47a07"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.10/gibo_Darwin_arm64.tar.gz"
+      sha256 "c1477a4ed31256da57d40741ff4d55f12681b54ed67a36246a897105cd18a9a4"
 
       def install
         bin.install "gibo"
@@ -28,16 +28,16 @@ class Gibo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.9/gibo_Linux_arm64.tar.gz"
-      sha256 "ff09c24982928708eac61a753c687c3942a95389aff26573f603e8bac042dab1"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.10/gibo_Linux_arm64.tar.gz"
+      sha256 "1072047bd7954b828aec5a30efc0d18094c32e058d35c2a5cd8d6d7e58a70854"
 
       def install
         bin.install "gibo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.9/gibo_Linux_x86_64.tar.gz"
-      sha256 "22bca2ceffa45e2f701e0d6bea4a40e6c7c79491f7eb0346e632f0e66bc6d7cb"
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.10/gibo_Linux_x86_64.tar.gz"
+      sha256 "c32f6b082877fcee9c4799f8a2d70f57f90c14011e35dfa5bc752e7bde867e0b"
 
       def install
         bin.install "gibo"
