@@ -5,20 +5,20 @@
 class Shellsnake < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/shellsnake"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.1/shellsnake_Darwin_arm64.tar.gz"
-      sha256 "866f664cf9e01349daf9035de8ccd20979f48b2ee7f57d854a933c6af57b2240"
+    on_intel do
+      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.2/shellsnake_Darwin_x86_64.tar.gz"
+      sha256 "48947aa554b941dc59deb30a2df686b2695825cbe52cc5097e533b263aee3bcd"
 
       def install
         bin.install "shellsnake"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.1/shellsnake_Darwin_x86_64.tar.gz"
-      sha256 "d2d8627f5f7d219301d22d0ce39729fc8e170ed5ebbd76bbdbf5290872fe13ce"
+    on_arm do
+      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.2/shellsnake_Darwin_arm64.tar.gz"
+      sha256 "cd90bfd46ee0ea331031846eea4358f74ae30684efffc1dc16f9169508e0ac94"
 
       def install
         bin.install "shellsnake"
@@ -27,20 +27,24 @@ class Shellsnake < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.1/shellsnake_Linux_arm64.tar.gz"
-      sha256 "74e49e31ec2290e435a4950abe33613183117ea11260568426c56142b4107b54"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.2/shellsnake_Linux_x86_64.tar.gz"
+        sha256 "b1269737edc2e453be0f15533c827a8b6d9093fa4766cca2f7d9eb446ebd9cca"
 
-      def install
-        bin.install "shellsnake"
+        def install
+          bin.install "shellsnake"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.1/shellsnake_Linux_x86_64.tar.gz"
-      sha256 "151df12763c6a7bd74a323487abc27ccb1faee769cad8c28610965b0eaed53ff"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/simonwhitaker/shellsnake/releases/download/v1.0.2/shellsnake_Linux_arm64.tar.gz"
+        sha256 "811ef38547b8f8435b0e750a91da83d1d9f9beb1e52fcd03e0239b818a62a780"
 
-      def install
-        bin.install "shellsnake"
+        def install
+          bin.install "shellsnake"
+        end
       end
     end
   end
