@@ -5,20 +5,20 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.11"
+  version "3.0.12"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.11/gibo_Darwin_arm64.tar.gz"
-      sha256 "2121cd14f3dd5a3136acdc5b3fc7a47152e95a302d484e3a1ae68da86d077d00"
+    on_intel do
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Darwin_x86_64.tar.gz"
+      sha256 "44c49ed138a1fda819af7a8a23a9d2d16658b09105927c8d45fec66bbc48925b"
 
       def install
         bin.install "gibo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.11/gibo_Darwin_x86_64.tar.gz"
-      sha256 "c577b4cda8a4dcfbdd7a3993f12ee1a26612ecba47b4b051e4f4032414a38940"
+    on_arm do
+      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Darwin_arm64.tar.gz"
+      sha256 "5f92c251538137ef1f58f4bc81a5b391d0479642a70ed301cf72ccb7e45bfd34"
 
       def install
         bin.install "gibo"
@@ -27,20 +27,24 @@ class Gibo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.11/gibo_Linux_arm64.tar.gz"
-      sha256 "05bd3c950580d56fb8d9d445f4df498cf1a7a3ec7cde76a5155cb554b0dc5ba1"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Linux_x86_64.tar.gz"
+        sha256 "b8f77947ad19537ae8f62525d15bb1d299edefb4584985fb196532d254dae625"
 
-      def install
-        bin.install "gibo"
+        def install
+          bin.install "gibo"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.11/gibo_Linux_x86_64.tar.gz"
-      sha256 "e97d6b979a8613007748683bc57b01555ec64f8cb6daf9a1c466e6f6ded3b1de"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Linux_arm64.tar.gz"
+        sha256 "f3549c8ebd65fbb95cd2c2d9aa6e0b2ea357c8b4ff899f14b1c0e39153d736c4"
 
-      def install
-        bin.install "gibo"
+        def install
+          bin.install "gibo"
+        end
       end
     end
   end
