@@ -5,27 +5,27 @@
 class Runny < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/runny"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/simonwhitaker/runny/releases/download/v1.0.3/runny_Darwin_x86_64.tar.gz"
-      sha256 "76d88643d310481caecd69a9415dc97a3a37a30c71d7a4891df89ee2f2fbaf07"
+      url "https://github.com/simonwhitaker/runny/releases/download/v1.0.4/runny_Darwin_x86_64.tar.gz"
+      sha256 "b825ac4e8686527ab4f9b534696666c8d499a92df3dff6e52e204c8b39a61142"
 
       def install
         bin.install "runny"
-        bash_completion.install "completions/runny-completion.bash"
+        bash_completion.install "completions/runny.bash" => "runny"
         fish_completion.install "completions/runny.fish"
         zsh_completion.install "completions/runny.zsh" => "_runny"
       end
     end
     on_arm do
-      url "https://github.com/simonwhitaker/runny/releases/download/v1.0.3/runny_Darwin_arm64.tar.gz"
-      sha256 "f1b689de6ae2393d30cb75960fcfa2cb42839fede00ef452a2e8976d25ba3114"
+      url "https://github.com/simonwhitaker/runny/releases/download/v1.0.4/runny_Darwin_arm64.tar.gz"
+      sha256 "bf829f8c44a085327f83ed84d7d5b37b57bf8a825e71d82686e9a4cdde6fc7d1"
 
       def install
         bin.install "runny"
-        bash_completion.install "completions/runny-completion.bash"
+        bash_completion.install "completions/runny.bash" => "runny"
         fish_completion.install "completions/runny.fish"
         zsh_completion.install "completions/runny.zsh" => "_runny"
       end
@@ -35,12 +35,12 @@ class Runny < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/simonwhitaker/runny/releases/download/v1.0.3/runny_Linux_x86_64.tar.gz"
-        sha256 "c56cd87819426285dd2031aa30309f548b9f4f5daa1217f6a6ef352f1482bde6"
+        url "https://github.com/simonwhitaker/runny/releases/download/v1.0.4/runny_Linux_x86_64.tar.gz"
+        sha256 "4eb17741fe5023698586d2824e285c91edfa8f908c0e601b4f509b0ab044b082"
 
         def install
           bin.install "runny"
-          bash_completion.install "completions/runny-completion.bash"
+          bash_completion.install "completions/runny.bash" => "runny"
           fish_completion.install "completions/runny.fish"
           zsh_completion.install "completions/runny.zsh" => "_runny"
         end
@@ -48,12 +48,12 @@ class Runny < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/simonwhitaker/runny/releases/download/v1.0.3/runny_Linux_arm64.tar.gz"
-        sha256 "af3ff3303a7a5a83f0229e8d065bb92f7e1303c6f32122e952a4954340d35fec"
+        url "https://github.com/simonwhitaker/runny/releases/download/v1.0.4/runny_Linux_arm64.tar.gz"
+        sha256 "c68afb379d62734d6ef3c5e8fac6d22a8a4fea74430b3fae5be47ce5a49d507b"
 
         def install
           bin.install "runny"
-          bash_completion.install "completions/runny-completion.bash"
+          bash_completion.install "completions/runny.bash" => "runny"
           fish_completion.install "completions/runny.fish"
           zsh_completion.install "completions/runny.zsh" => "_runny"
         end
