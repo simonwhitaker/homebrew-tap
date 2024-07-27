@@ -5,12 +5,12 @@
 class Runny < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/runny"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/simonwhitaker/runny/releases/download/v0.0.4/runny_Darwin_x86_64.tar.gz"
-      sha256 "3cb6756b7a9083bd29a864ec2232dd033341845ee868fb360dba95f007673fd2"
+      url "https://github.com/simonwhitaker/runny/releases/download/v0.0.5/runny_Darwin_x86_64.tar.gz"
+      sha256 "de4980c095baa960a70cec4bedc177cd7bc33dbec0baa6f9d5c848ed43f1c157"
 
       def install
         bin.install "runny"
@@ -20,8 +20,8 @@ class Runny < Formula
       end
     end
     on_arm do
-      url "https://github.com/simonwhitaker/runny/releases/download/v0.0.4/runny_Darwin_arm64.tar.gz"
-      sha256 "44afc2c0955864abb40beaf41de4755a205cdd51024576178ceb4b5ac6c3122f"
+      url "https://github.com/simonwhitaker/runny/releases/download/v0.0.5/runny_Darwin_arm64.tar.gz"
+      sha256 "3c95adf3272dcdc751e06b671c8927993c46f3dc5273e3d3aa533b688b64b074"
 
       def install
         bin.install "runny"
@@ -35,8 +35,8 @@ class Runny < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/simonwhitaker/runny/releases/download/v0.0.4/runny_Linux_x86_64.tar.gz"
-        sha256 "e89af9c980b6fa5dfa1cbe20cf618228fc8202ebcdfda7270f5fcba1f6a459fa"
+        url "https://github.com/simonwhitaker/runny/releases/download/v0.0.5/runny_Linux_x86_64.tar.gz"
+        sha256 "9d6a047bdd53e1e68063f0502d78c6a309329d6fc76f37e732eb42628b5ca569"
 
         def install
           bin.install "runny"
@@ -48,8 +48,8 @@ class Runny < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/simonwhitaker/runny/releases/download/v0.0.4/runny_Linux_arm64.tar.gz"
-        sha256 "8252557033ceb2c9ceecfa6f61077e0b98a1b70195bcb9dc316d8cbf428914a7"
+        url "https://github.com/simonwhitaker/runny/releases/download/v0.0.5/runny_Linux_arm64.tar.gz"
+        sha256 "179e9695b0bdb37f4abd55b416a47b304b28528e9fd5469eb7c05bb17dbc2d40"
 
         def install
           bin.install "runny"
