@@ -5,7 +5,9 @@
 class Gibo < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.14"
+  version "3.0.15"
+
+  disable! date: "2025-12-14", because: "the cask should be used now instead", replacement_cask: "gibo"
 
   on_macos do
     on_intel do
