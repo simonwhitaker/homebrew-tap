@@ -5,7 +5,9 @@
 class Runny < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/runny"
-  version "0.0.7"
+  version "0.0.8"
+
+  disable! date: "2025-12-14", because: "the cask should be used now instead", replacement_cask: "runny"
 
   on_macos do
     if Hardware::CPU.intel?
