@@ -5,7 +5,9 @@
 class Shellsnake < Formula
   desc ""
   homepage "https://github.com/simonwhitaker/shellsnake"
-  version "1.0.2"
+  version "1.0.3"
+
+  disable! date: "2025-12-14", because: "the cask should be used now instead", replacement_cask: "shellsnake"
 
   on_macos do
     on_intel do
