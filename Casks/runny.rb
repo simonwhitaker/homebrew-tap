@@ -3,7 +3,7 @@ cask "runny" do
   name "runny"
   desc ""
   homepage "https://github.com/simonwhitaker/runny"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "runny" do
   on_macos do
     on_intel do
       url "https://github.com/simonwhitaker/runny/releases/download/v#{version}/runny_Darwin_x86_64.tar.gz"
-      sha256 "7c8a61efe32d5160bfb660e0eb53b50dca5f499c1b9986b82c3c65aeba563b9a"
+      sha256 "24b15811c5a7db91c4d3fe9a7c48b73ca623a361b5624bb85bc24eba754815f1"
     end
     on_arm do
       url "https://github.com/simonwhitaker/runny/releases/download/v#{version}/runny_Darwin_arm64.tar.gz"
-      sha256 "82a4676cace85de67b8b7c7addb7f89205406ab32b4ef6f555a2d52de0ae1a82"
+      sha256 "b1d2a5063ac70869c8b0d1dabba18bde683d397085d82696b344624a11e8df6b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/simonwhitaker/runny/releases/download/v#{version}/runny_Linux_x86_64.tar.gz"
-      sha256 "229edc25220e9abe4fbfbe52d5e9e6f50c80f9c29d219d6111781904fca651d3"
+      sha256 "9c704c2f34494fe7403180ce44f9a2dbf73aa13bc6bc1ebf76f5cd67c28edd8e"
     end
     on_arm do
       url "https://github.com/simonwhitaker/runny/releases/download/v#{version}/runny_Linux_arm64.tar.gz"
-      sha256 "72c2a41d35243119ee6b3d366fc8caee4e31383ec1d4847b679531d0d6741ddc"
+      sha256 "1cf17cafbd6c1578695c6b55c3929c1525e25898ca9c7b3a8d606ee54f820993"
     end
   end
 
