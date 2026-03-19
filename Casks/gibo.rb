@@ -3,7 +3,7 @@ cask "gibo" do
   name "gibo"
   desc ""
   homepage "https://github.com/simonwhitaker/gibo"
-  version "3.0.16"
+  version "3.0.17"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "gibo" do
   on_macos do
     on_intel do
       url "https://github.com/simonwhitaker/gibo/releases/download/v#{version}/gibo_Darwin_x86_64.tar.gz"
-      sha256 "3f11fc2647afdbfcd1c2fef66259d7c3a45c536ad0e9238de8160659a4d84e85"
+      sha256 "b598a44267c91eec47c80c17e5f5dc9a8a070e1fb722f6878e676d18bae05410"
     end
     on_arm do
       url "https://github.com/simonwhitaker/gibo/releases/download/v#{version}/gibo_Darwin_arm64.tar.gz"
-      sha256 "00cb7c74b487628bea5ec3a18e161946290a1cb7a9918517d24f9202d75f0a55"
+      sha256 "fc09e622aadcc82d0361e5c42312b9b24837e47d9419a288f3b4895329de59cd"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/simonwhitaker/gibo/releases/download/v#{version}/gibo_Linux_x86_64.tar.gz"
-      sha256 "f98b704bbed0e2db9e5a67a8ec208dc3e6929c44df1d04b7c938e2c134dc487e"
+      sha256 "cf72ba4800194f02c6adbae4987fcf586e4dde0e21593974b74b55854da50f64"
     end
     on_arm do
       url "https://github.com/simonwhitaker/gibo/releases/download/v#{version}/gibo_Linux_arm64.tar.gz"
-      sha256 "65ef4bff9fd67c758bc886eddea44a076fdce54cf4acfbb4cb8bfd85a6253c49"
+      sha256 "d21996670bf33cdb8beec8bb8f641880e0397f7e09121546df45a400a5124dd8"
     end
   end
 
