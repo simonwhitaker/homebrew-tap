@@ -3,7 +3,7 @@ cask "shellsnake" do
   name "shellsnake"
   desc ""
   homepage "https://github.com/simonwhitaker/shellsnake"
-  version "1.0.3"
+  version "1.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "shellsnake" do
   on_macos do
     on_intel do
       url "https://github.com/simonwhitaker/shellsnake/releases/download/v#{version}/shellsnake_Darwin_x86_64.tar.gz"
-      sha256 "355a3f2615e0b6d190625228cf766643b4a4fc495ead2e6bb9e546d47597541c"
+      sha256 "b04378a84a705f790094f130956053b7e9888b7676152b153cec18ca1dccef14"
     end
     on_arm do
       url "https://github.com/simonwhitaker/shellsnake/releases/download/v#{version}/shellsnake_Darwin_arm64.tar.gz"
-      sha256 "d7c81dc426257d72ef3783f3471dab5135b28269dcaed0a8d05547d1c46f7cf6"
+      sha256 "bd5ca0de1710ed42663e5428f20f44e0ed48eceafda598068cdf32fb689fc1bb"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/simonwhitaker/shellsnake/releases/download/v#{version}/shellsnake_Linux_x86_64.tar.gz"
-      sha256 "3d80715380526bab962050cd2748562fefa3ecb8d88376c3e3108eb11c64759f"
+      sha256 "5ff859689a7993b88bedd9e49b0d899d82063446c9cd09a849e34436b77ab0e5"
     end
     on_arm do
       url "https://github.com/simonwhitaker/shellsnake/releases/download/v#{version}/shellsnake_Linux_arm64.tar.gz"
-      sha256 "6265b1a7f2f446e874cd27a06eda81c53024ce8c0fbdd0d2c7ddbc5454acfa71"
+      sha256 "7827f9eae9ddb166c0c84c0cd5445f3b4806b0f4e6261348dd4ae423901067b3"
     end
   end
 
