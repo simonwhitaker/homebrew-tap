@@ -3,7 +3,7 @@ cask "claude-history" do
   name "claude-history"
   desc ""
   homepage "https://github.com/simonwhitaker/claude-code-history"
-  version "0.1.7"
+  version "0.1.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "claude-history" do
   on_macos do
     on_intel do
       url "https://github.com/simonwhitaker/claude-code-history/releases/download/v#{version}/claude-history_#{version}_darwin_amd64.tar.gz"
-      sha256 "51610fb4267d8c8f53f3028858dd2d5845f968618c49b7e1b513b194d8b68eb7"
+      sha256 "98b24f276fa3dd92d16f72f0374152c7d91cffe8acc7312445101456a040d134"
     end
     on_arm do
       url "https://github.com/simonwhitaker/claude-code-history/releases/download/v#{version}/claude-history_#{version}_darwin_arm64.tar.gz"
-      sha256 "f54d193ad0182a0632e48de50346d83afc5555b0f75a8fc392d1a7423fc057cf"
+      sha256 "53d4b091ab58a9652a45db662f14f2b62953589a431d8af9508fa55bd92b43a2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/simonwhitaker/claude-code-history/releases/download/v#{version}/claude-history_#{version}_linux_amd64.tar.gz"
-      sha256 "36275471b9e306310b1e7e5697e4921befd68a2471cdcc40f2fc5caa6ab6d148"
+      sha256 "c6689933d15535908547f411cf474a879ea7ba2a8081d7c0f064c9629328df6a"
     end
     on_arm do
       url "https://github.com/simonwhitaker/claude-code-history/releases/download/v#{version}/claude-history_#{version}_linux_arm64.tar.gz"
-      sha256 "5b9e03efaf289199342894ba15d528e25fae230c7ce1ae5632a1e5bd3ad4f144"
+      sha256 "0d6ec1053ffe43f50ced3bd264b57eac91c9bedb7858860d604baca5420975f0"
     end
   end
 
