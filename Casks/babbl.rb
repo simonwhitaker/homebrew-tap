@@ -33,7 +33,7 @@ cask "babbl" do
 
   binary "babbl"
 
-  postflight_steps do
+  preflight_steps do
     on_macos do
       run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/babbl"]
     end
